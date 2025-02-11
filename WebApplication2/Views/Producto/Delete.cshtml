@@ -1,0 +1,20 @@
+﻿@model WebApplication2.Models.Producto
+
+<h2>Elimnar Producto</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" value="@Model.Nombre" readonly />
+    </div>
+    <div class="form-group">
+        <label for="Precio">Precio</label>
+        <input type="number" class="form-control" id="Precio" name="Precio" value="@Model.Precio" readonly />
+    </div>
+    <div class="form-group">
+        <label for="Mensaje">Esta seguro que desea eliminar estos datos</label>
+        <a href="/Producto/Index"> Regresar</a>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Eliminar</button>
+</form>
