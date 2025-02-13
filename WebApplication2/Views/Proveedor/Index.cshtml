@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebApplication2.Models.Proveedor>
+
+<button id="redirectBtn" type="button" class="btn btn-light">  <img src="~/css/Imagenes/add.png" alt="Alternate Text" /> AGREGAR </button>
+
+<script>
+    document.getElementById('redirectBtn').addEventListener('click', function() {
+        window.location.href = '/Proveedor/Create';
+    });
+</script>
+
+<h2>Provedores</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Articulo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proveedor in Model)
+        {
+            <tr>
+                <td>@proveedor.Id</td>
+                <td>@proveedor.Nombre</td>
+                <td>@proveedor.Direccion</td>
+                <td>@proveedor.Articulo</td>
+                <td>
+                    <a href="/Proveedor/Edit/@proveedor.Id"> <img src="~/css/Imagenes/edit.png" alt="Alternate Text" /> Editar</a>  |
+                    <a href="/Proveedor/Delete/@proveedor.Id"> <img src="~/css/Imagenes/cross.png" alt="Alternate Text" /> Eliminar</a>
+                </td> 
+            </tr>
+        }
+    </tbody>
+</table>

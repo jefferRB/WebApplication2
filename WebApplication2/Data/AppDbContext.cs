@@ -10,6 +10,8 @@ namespace WebApplication2.Data
 
        public DbSet<Producto> Productos { get; set; }  // Definimos el DbSet para la tabla productos
 
-     
+       public DbSet<Proveedor> Provedores { get; set; }
+
+
     }
 }
