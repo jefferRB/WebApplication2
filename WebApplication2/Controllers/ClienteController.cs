@@ -15,14 +15,14 @@ namespace WebApplication2.Controllers
         }
 
 
-        public IActionResult Index()
+        public IActionResult Principal()
         {
             return View();
         }
 
         public async Task<IActionResult> Index()
         {
-            var productos = await _context.Clientes.ToListAsync();
+            var clientes = await _context.Clientes.ToListAsync();
             return View(clientes);
         }
 
