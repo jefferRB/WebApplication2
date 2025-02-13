@@ -34,7 +34,7 @@ namespace WebApplication2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido,Correo")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido,correo")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -48,7 +48,7 @@ namespace WebApplication2.Controllers
         //Metodo Editar cliente
         public async Task<IActionResult> Edit(int id)
         {
-            var cliente = await _context.Productos.FindAsync(id);
+            var cliente = await _context.Clientes.FindAsync(id);
             if (cliente == null)
             {
                 return NotFound();

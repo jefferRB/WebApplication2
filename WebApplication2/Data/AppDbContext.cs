@@ -9,8 +9,8 @@ namespace WebApplication2.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
        public DbSet<Producto> Productos { get; set; }  // Definimos el DbSet para la tabla productos
-
-       public DbSet<Proveedor> Provedores { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Proveedor> Provedores { get; set; }
 
 
     }
