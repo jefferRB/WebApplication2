@@ -40,11 +40,7 @@ namespace WebApplication2.Controllers
         // POST: SuppliersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Direccion,Articulo")] Proveedor proveedor)
-=======
         public async Task<IActionResult> Create([Bind("Id,Nombre,Direccion,Articulo, Email, Telefono")] Proveedor proveedor)
->>>>>>> 1fe8ccabcf910de1c112e52fcc0a1d6f60754de2
         {
             if (ModelState.IsValid)
             {
